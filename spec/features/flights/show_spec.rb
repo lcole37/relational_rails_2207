@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Flight show page' do
-  xit "shows flight with that ID, including attributes" do
+  it "shows flight with that ID, including attributes" do
     maui = Flight.create!(number: "707", airline: "United", destination: "Maui", international: false)
     nyc = Flight.create!(number: "423", airline: "Southwest", destination: "New York", international: false)
     columbus = Flight.create!(number: "890", airline: "American", destination: "Columbus", international: false)
