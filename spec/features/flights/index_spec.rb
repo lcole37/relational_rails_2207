@@ -15,12 +15,29 @@ RSpec.describe 'flight index page' do
     mary = maui.passengers.create!(name: "Mary", age: "18", gold_status: false)
 
     visit '/flights'
+    within "#flights-#{maui.id}" do
+      expect(page).to have_content("707")
+      expect(page).not_to have_content("180")
+    end
 
-    expect(page).to have_content("707")
-    expect(page).to have_content("423")
-    expect(page).to have_content("890")
-    expect(page).to have_content("398")
-    expect(page).to have_content("524")
-    expect(page).not_to have_content("180")
+    within "#flights-#{nyc.id}" do
+      expect(page).to have_content("423")
+      expect(page).not_to have_content("180")
+    end
+
+    within "#flights-#{columbus.id}" do
+      expect(page).to have_content("890")
+      expect(page).not_to have_content("180")
+    end
+
+    within "#flights-#{dc.id}" do
+      expect(page).to have_content("398")
+      expect(page).not_to have_content("180")
+    end
+
+    within "#flights-#{cancun.id}" do
+      expect(page).to have_content("524")
+      expect(page).not_to have_content("180")
+    end
   end
 end
