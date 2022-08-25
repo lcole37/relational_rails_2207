@@ -2,9 +2,9 @@
 
 <% @passengers.each do |passenger| %>
 <div id="passengers-<%= passenger.id %>">
-<h3> <%= passenger.name %> </h3>
-<p> <%= passenger.age %> </p>
-<p> <%= passenger.gold_status %> </p>
-<p> Flight: <%= passenger.flight_id %> </p>
+<h3> Name: <%= passenger.name %> </h3>
+<p> Age: <%= passenger.age %> </p>
+<p> Gold Status? <%= passenger.gold_status %> </p>
+<p> Flight ID: <%= passenger.flight_id %> </p>
 </div>
 <% end %>
