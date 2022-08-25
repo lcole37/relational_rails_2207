@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get '/flights/:id', to: 'flights#show'
   get '/passengers', to: 'passengers#index'
   get '/passengers/:id', to: 'passengers#show'
+  get '/flights/:id/passengers', to: 'flight_passengers#index'
 end
