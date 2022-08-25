@@ -25,22 +25,6 @@ Things you may want to cover:
 
 CRUD
 
-[ ] done
-
-User Story 3, Child Index
-
-As a visitor
-When I visit '/child_table_name'
-Then I see each Child in the system including the Child's attributes:
-[ ] done
-
-User Story 4, Child Show
-
-As a visitor
-When I visit '/child_table_name/:id'
-Then I see the child with that id including the child's attributes:
-[ ] done
-
 User Story 5, Parent Children Index
 
 As a visitor
