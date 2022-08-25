@@ -1,0 +1,8 @@
+<h1> Flight <%= @flight.id %> Passenger Index</h1>
+<h2> Destination: <%= @flight.destination %> </h2>
+<% @flight.passengers.each do |passenger| %>
+  <h3> Passenger ID: <%= passenger.id %> </h3>
+    <h4>  Name: <%= passenger.name %> </h4>
+  <p> Age: <%= passenger.age %> </p>
+  <p> Gold Status?: <%= passenger.gold_status %> </p>
+<% end %>
