@@ -45,7 +45,7 @@ RSpec.describe 'flight index page' do
       expect(page).not_to have_content("180")
     end
   end
-
+        #created_at and updated_at were added to check ordering.
   it 'displays the flights ordered by most recent' do
     maui = Flight.create!(number: "707", airline: "United", destination: "Maui", international: false, created_at: Time.now - 1.day)
     nyc = Flight.create!(number: "423", airline: "Southwest", destination: "New York", international: false, created_at: Time.now - 1.week)
@@ -64,5 +64,15 @@ RSpec.describe 'flight index page' do
 
     expect("Columbus").to appear_before("Maui")
     expect("Maui").to appear_before("New York")
+  end
+
+  it 'displays a link to the passenger index' do
+    visit '/flights'
+
+    expect(page).to have_link("All Passengers")
+
+    # click_link("Passengers")
+    #
+    # expect(page)
   end
 end

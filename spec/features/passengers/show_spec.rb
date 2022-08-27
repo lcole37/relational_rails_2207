@@ -18,12 +18,22 @@ RSpec.describe 'passenger show page' do
 
   it 'displays passenger name, id, and attributes' do
     visit "/passengers/#{@cindi.id}"
-    save_and_open_page
     #use within blocks here, div id="passenger"--....
 
     expect(page).to have_content("Cindi")
     expect(page).to have_content("63")
     expect(page).to have_content("true")
     expect(page).not_to have_content("Mary")
+  end
+
+  it 'displays a link to the passenger index' do
+    visit "/passengers/#{@cindi.id}"
+
+    expect(page).to have_link("All Passengers")
+
+    # save_and_open_page
+    # click_link("Passengers")
+    #
+    # expect(page)
   end
 end
