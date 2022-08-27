@@ -10,4 +10,4 @@
 
 <p> Number of Passengers: <%= @flight.passengers.count %> </p>
 
-<p> Passengers link goes here</p>
+<p>  <%= link_to "Flight #{@flight.number} Passengers", "/flights/#{@flight.id}/passengers" %> </p>
