@@ -47,4 +47,12 @@ RSpec.describe 'Flight show page' do
     #
     # expect(page)
   end
+  it 'displays a link to the passengers on flight' do
+    visit "/flights/#{maui.id}"
+
+    expect(page).to have_link("Flight 707 Passengers")
+    # click_link("Passengers")
+    #
+    # expect(page)
+  end
 end
