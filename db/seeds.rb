@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Flight.destroy_all
 Passenger.destroy_all
+Flight.destroy_all
 
 maui = Flight.create!(number: "707", airline: "United", destination: "Maui", international: false)
 nyc = Flight.create!(number: "423", airline: "Southwest", destination: "New York", international: false)
