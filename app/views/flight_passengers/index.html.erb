@@ -1,3 +1,4 @@
+<p>  <%= link_to "All Passengers", "/passengers/index" %> </p>
 <h1> Flight <%= @flight.id %> Passenger Index</h1>
 <h2> Destination: <%= @flight.destination %> </h2>
 <% @flight.passengers.each do |passenger| %>
