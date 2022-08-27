@@ -23,10 +23,33 @@ Things you may want to cover:
 
 * ...
 
-CRUD
+[ ] done
 
-User Story 5, Parent Children Index
+User Story 7, Parent Child Count
 
 As a visitor
-When I visit '/parents/:parent_id/child_table_name'
-Then I see each Child that is associated with that Parent with each Child's attributes:
+When I visit a parent's show page
+I see a count of the number of children associated with this parent
+Usability
+
+[ ] done
+
+User Story 8, Child Index Link
+
+As a visitor
+When I visit any page on the site
+Then I see a link at the top of the page that takes me to the Child Index
+[ ] done
+
+User Story 9, Parent Index Link
+
+As a visitor
+When I visit any page on the site
+Then I see a link at the top of the page that takes me to the Parent Index
+[ ] done
+
+User Story 10, Parent Child Index Link
+
+As a visitor
+When I visit a parent show page ('/parents/:id')
+Then I see a link to take me to that parent's `child_table_name` page ('/parents/:id/child_table_name')
