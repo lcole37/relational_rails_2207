@@ -53,4 +53,14 @@ RSpec.describe "Passenger show page" do
     #
     # expect(page)
   end
+
+  it 'displays a link to the flight index' do
+    visit "/passengers"
+
+    expect(page).to have_link("All Flights")
+
+    # click_link("Passengers")
+    #
+    # expect(page)
+  end
 end
