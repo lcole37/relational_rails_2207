@@ -23,17 +23,6 @@ Things you may want to cover:
 
 * ...
 
-[ ] done
-
-User Story 7, Parent Child Count
-
-As a visitor
-When I visit a parent's show page
-I see a count of the number of children associated with this parent
-Usability
-
-[ ] done
-
 User Story 8, Child Index Link
 
 As a visitor
