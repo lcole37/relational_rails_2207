@@ -26,6 +26,11 @@ RSpec.describe 'Flight show page' do
     visit "/flights/#{maui.id}"
 
     expect(page).to have_content(2)
+
+    visit "/flights/#{nyc.id}"
+
+    expect(page).to have_content(1)
+    expect(page).not_to have_content("Maui")
   end
 
   it 'displays a link to the passenger index' do
