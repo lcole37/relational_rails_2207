@@ -102,7 +102,7 @@ RSpec.describe 'flight index page' do
 
     expect(page).not_to have_content("Terri")
     expect(page).to have_link("New Flight")
-    save_and_open_page
+    # save_and_open_page
     click_link("New Flight")
 
     expect(current_path).to eq('/flights/new')
