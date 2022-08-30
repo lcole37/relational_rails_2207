@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get '/passengers/:id', to: 'passengers#show'
   get '/flights/:id/passengers', to: 'flight_passengers#index'
   post '/flights', to: 'flights#create'
+  get '/flights/:id/edit', to: 'flights#edit'
+  patch 'flights/:id', to: 'flights#update'
 end

@@ -5,6 +5,7 @@
 <% @flights.each do |flight| %>
 <div id="flights-<%= flight.id %>">
 <h3> Flight <%= flight.number %>: <%= flight.destination %> </h3>
+<p> <%= button_to "Edit #{flight.number}", "/flights/#{flight.id}/edit", method: :get %> </p>
 </div>
 <% end %>
 

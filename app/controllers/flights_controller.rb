@@ -15,6 +15,15 @@ class FlightsController < ApplicationController
     redirect_to '/flights'
   end
 
+  def edit
+    @flight = Flight.find(params[:id])
+  end
+
+  def update
+    flight = Flight.find(params[:id])
+    flight.update(flight_params)
+    redirect_to '/flights'
+  end
 
   private
 
