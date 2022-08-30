@@ -1,4 +1,11 @@
-<%= form_with url: ''....... || do %>
-
-
+<%= form_with url:'/flights', method: :post, local: true do |form| %>
+    <%= form.label :number %>
+    <%= form.text_field :number %>
+    <%= form.label :airline %>
+    <%= form.text_field :airline %>
+    <%= form.label :destination %>
+    <%= form.text_field :destination %>
+    <%= form.label :international %>
+    <%= form.text_field :international %>
+    <%= form.submit "Create Flight" %>
 <% end %>
