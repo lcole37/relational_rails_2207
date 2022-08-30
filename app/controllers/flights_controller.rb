@@ -7,7 +7,21 @@ class FlightsController < ApplicationController
     @flight = Flight.find(params[:id])
   end
 
-  # def passenger_count
-  #   Self.passengers.count
-  # end
+  def new
+  end
+
+  def create
+    Flight.create(flight_params)
+    redirect_to '/flights'
+  end
+
+
+  private
+
+  def flight_params
+    params.permit(:number,
+                :airline,
+                :destination,
+                :international)
+  end
 end

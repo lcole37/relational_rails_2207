@@ -8,6 +8,6 @@
 <p> Destination: <%= @flight.destination %> </p>
 <p> International?: <%= @flight.international %> </p>
 
-<p> Number of Passengers: <%= @flight.passengers.count %> </p>
+<p> Number of Passengers: <%= @flight.passenger_count %> </p>
 
 <p>  <%= link_to "Flight #{@flight.number} Passengers", "/flights/#{@flight.id}/passengers" %> </p>
