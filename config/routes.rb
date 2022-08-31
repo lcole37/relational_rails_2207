@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   post '/flights', to: 'flights#create'
   get '/flights/:id/edit', to: 'flights#edit'
   patch 'flights/:id', to: 'flights#update'
+  get '/flights/:id/passengers/new', to: 'flight_passengers#new'
+  post '/flights/:id/passengers', to: 'flight_passengers#create'
 end

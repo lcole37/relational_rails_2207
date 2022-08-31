@@ -1,0 +1,9 @@
+<%= form_with url:"/flights/#{@flight.id}/passengers", method: :post, local: true do |form| %>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+    <%= form.label :age %>
+    <%= form.text_field :age %>
+    <%= form.label :gold_status %>
+    <%= form.text_field :gold_status %>
+    <%= form.submit "Create Passenger" %>
+<% end %>
