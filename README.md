@@ -24,40 +24,6 @@ Things you may want to cover:
 * ...
 
 
-Iteration 2
-
-CRUD
-
-[ ] done
-
-User Story 11, Parent Creation
-
-As a visitor
-When I visit the Parent Index page
-Then I see a link to create a new Parent record, "New Parent"
-When I click this link
-Then I am taken to '/parents/new' where I  see a form for a new parent record
-When I fill out the form with a new parent's attributes:
-And I click the button "Create Parent" to submit the form
-Then a `POST` request is sent to the '/parents' route,
-a new parent record is created,
-and I am redirected to the Parent Index page where I see the new Parent displayed.
-[ ] done
-
-User Story 12, Parent Update
-
-As a visitor
-When I visit a parent show page
-Then I see a link to update the parent "Update Parent"
-When I click the link "Update Parent"
-Then I am taken to '/parents/:id/edit' where I  see a form to edit the parent's attributes:
-When I fill out the form with updated information
-And I click the button to submit the form
-Then a `PATCH` request is sent to '/parents/:id',
-the parent's info is updated,
-and I am redirected to the Parent's Show page where I see the parent's updated info
-[ ] done
-
 User Story 13, Parent Child Creation
 
 As a visitor
