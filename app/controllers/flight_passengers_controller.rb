@@ -5,13 +5,14 @@ class FlightPassengersController < ApplicationController
   end
 
   def new
-    @flight = Flight.find(params[:flight_id])
+    # require "pry"; binding.pry
+    @flight = Flight.find(params[:id])
   end
 
   def create
+    # require "pry"; binding.pry
     passenger = Passenger.create(passenger_params)
     redirect_to "/flights/#{passenger.flight_id}/passengers"
-    # require "pry"; binding.pry
   end
 
   private
@@ -28,6 +29,5 @@ class FlightPassengersController < ApplicationController
                   :age,
                   :gold_status,
                   :flight_id)
-
   end
 end
